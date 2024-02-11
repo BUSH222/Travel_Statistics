@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7mw-JA-PCK">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Time tracker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Travel_Statistics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-JN-pTu">
+                                <rect key="frame" x="93" y="395" width="228" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="0id-Zx-Tyc"/>
+                                    <constraint firstAttribute="height" constant="106" id="TcN-JV-79x"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="GO!" subtitle="DATE" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current location:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiN-wB-RnY">
+                                <rect key="frame" x="97" y="298" width="220" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gy-3S-mCG">
+                                <rect key="frame" x="175.5" y="509" width="63" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="undo"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5G-qB-57w">
+                                <rect key="frame" x="0.0" y="52" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bbf-JN-pTu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1UI-IH-pPn"/>
+                            <constraint firstItem="r5G-qB-57w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CZt-LU-juP"/>
+                            <constraint firstItem="bbf-JN-pTu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gos-kK-Vds"/>
+                            <constraint firstItem="bbf-JN-pTu" firstAttribute="top" secondItem="uiN-wB-RnY" secondAttribute="bottom" constant="60" id="KmG-SQ-Ley"/>
+                            <constraint firstItem="uiN-wB-RnY" firstAttribute="top" secondItem="r5G-qB-57w" secondAttribute="bottom" constant="30" id="SDN-uh-hKc"/>
+                            <constraint firstItem="4gy-3S-mCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UDo-af-yci"/>
+                            <constraint firstItem="r5G-qB-57w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xma-OW-wPi"/>
+                            <constraint firstItem="4gy-3S-mCG" firstAttribute="top" secondItem="bbf-JN-pTu" secondAttribute="bottom" constant="8" symbolic="YES" id="gdC-0U-6DM"/>
+                            <constraint firstItem="uiN-wB-RnY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mEQ-OP-cRf"/>
+                            <constraint firstItem="bbf-JN-pTu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r38-bS-Yhg"/>
+                            <constraint firstItem="bbf-JN-pTu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vLJ-WW-XZD"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Time tracker" image="timer" catalog="system" id="5uU-Pi-dwN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-914" y="370"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="hTv-Xe-Z0y">
+            <objects>
+                <viewController id="ydW-wP-PNW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tva-ee-g3P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qwr-5H-w2O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Charts" image="chart.bar" catalog="system" id="Pit-AZ-biS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4K-bJ-pfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="370"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cbM-LZ-YxE">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7mw-JA-PCK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3MO-6k-oHC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RvS-Mz-dJb"/>
+                        <segue destination="ydW-wP-PNW" kind="relationship" relationship="viewControllers" id="Niy-K5-43H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFq-M2-kFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84.057971014492765" y="-391.07142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
